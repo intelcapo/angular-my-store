@@ -1,0 +1,10 @@
+
+<img 
+    [src]="image" 
+    alt="image" 
+    *ngIf="image ; else imgElse">
+<ng-template #imgElse>
+    <img 
+        src="./assets/default.jpg" 
+        alt="image by default">
+</ng-template>

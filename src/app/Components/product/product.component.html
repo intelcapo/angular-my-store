@@ -1,0 +1,7 @@
+<div class="product-container">    
+    <app-img [image]="product.image"></app-img>
+    <p>{{product.price | currency: 'COP '}}</p>
+    <h3>{{product.title | titlecase }}</h3> 
+    <p appHighligth>{{ product.description }}</p>  
+    <button (click)="addProductToCart()">Add to cart</button>
+</div>

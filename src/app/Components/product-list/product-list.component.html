@@ -1,0 +1,11 @@
+<div class="container-totals">
+    <span class="amount">Cantidad de productos {{this.shoppingCart.length}}</span><br>
+    <span class="total">Total {{this.total | currency}}</span>
+</div>
+<div class="products-grid">
+    <app-product 
+        *ngFor="let product of products" 
+        [product]="product"
+        (onAddCart)="addProductToCart($event)">
+    </app-product>
+</div>
