@@ -1,11 +1,33 @@
+<button (click)="toggleProductDetail()">Open</button>
 <div class="container-totals">
     <span class="amount">Cantidad de productos {{this.shoppingCart.length}}</span><br>
     <span class="total">Total {{this.total | currency}}</span>
 </div>
+<button (click)="createProduct()">Create Product</button>
 <div class="products-grid">
     <app-product 
         *ngFor="let product of products" 
         [product]="product"
-        (onAddCart)="addProductToCart($event)">
+        (onAddCart)="addProductToCart($event)"
+        (onSeeDetail)="seeProductDetail($event)">
     </app-product>
+</div>
+<div class="product-detail"
+ [class.active]="showProductDetail">
+    <div>
+        <h2>{{productSelected.title}}</h2>
+        <!-- <swiper>
+            <ng-template *ngFor="let image of productSelected.images">
+                <img [src]="image">
+            </ng-template>
+        </swiper> -->
+        <img 
+            [src]="productSelected.images[0]" 
+            width="100px" 
+            alt="test">
+        <p>{{productSelected.description}}</p>
+        <button (click)="toggleProductDetail()">Close</button>
+        <button (click)="updateProduct()">Update product</button>
+        <button (click)="deleteProduct()">Delete product</button>
+    </div>
 </div>

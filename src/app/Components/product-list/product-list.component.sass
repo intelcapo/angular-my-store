@@ -3,6 +3,21 @@
   flex-direction: column
   width: 100vw
 
+.product-detail
+  position: fixed
+  top: 0
+  left: 50%
+  right: 0 
+  bottom: 0   
+  background: white
+  display: flex
+  flex-direction:  column
+  transform: translateX(100%)
+  justify-content: flex-start
+  transition: all ease-out .5s
+  &.active
+    transform: translateX(0)
+
 /*Tablet*/
 @media screen and (min-width: 40em) and (max-width:63.9em)
   .products-grid 

@@ -9,6 +9,7 @@ import { ProductListComponent } from './Components/product-list/product-list.com
 import { HeaderComponent } from './Components/header/header.component'
 import { HttpClientModule } from '@angular/common/http'
 import { HighligthDirective } from './Directives/highligth.directive'
+import { SwiperModule } from 'swiper/angular'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { HighligthDirective } from './Directives/highligth.directive'
     HeaderComponent,
     HighligthDirective
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    SwiperModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
